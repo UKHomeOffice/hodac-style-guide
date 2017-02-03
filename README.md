@@ -46,6 +46,6 @@ Markdowns files for the solution can be found in the following folders:
 ## Integration with other applications
 
 Please import the:
- git+https://gitlab.digital.homeoffice.gov.uk/hodac/HODAC-style-guide.git#master repository
+ https://github.com/UKHomeOffice/hodac-style-guide.git#master repository
 
 Copy all the assets, as reference please look at the Gulp file.
