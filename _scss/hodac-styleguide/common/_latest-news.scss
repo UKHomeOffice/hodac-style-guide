@@ -1,0 +1,45 @@
+$module: latest-news;
+
+.#{$module} {
+  p {
+    font-size: 16px;
+  }
+
+  .heading-medium {
+    margin-bottom: 15px;
+    margin-top: 25px;
+  }
+
+  &__heading {
+    border-bottom: 10px solid $govuk-blue;
+
+    h2 {
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin-bottom: 15px;
+
+    h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 12px;
+    }
+
+    li {
+      border-bottom: 1px solid $grey-2;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__more-links {
+    font-size: 16px;
+  }
+}

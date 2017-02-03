@@ -1,0 +1,110 @@
+// Placeholders
+
+/**
+ * app-state
+ */
+%app-state {
+  &--primary {
+    background-color: $govuk-blue;
+  }
+  &--success {
+    background-color: $green;
+  }
+  &--info {
+    background-color: $light-blue;
+  }
+  &--warning {
+    background-color: $yellow;
+  }
+  &--danger {
+    background-color: $red;
+  }
+}
+
+/**
+ * overflow-parent
+ */
+%overflow-parent {
+  margin-left: -99999px!important;
+  padding-left: 99999px!important;
+  margin-right: -99999px!important;
+  padding-right: 99999px!important;
+}
+
+/**
+ * overflow-wrapper
+ */
+%overflow-wrapper {
+  max-width: 960px;
+
+  @include media(tablet) {
+  }
+
+  @include media(1020px) {
+    margin: 0 auto;
+  }
+}
+
+
+/**
+ * unstyle-list
+ */
+%unstyle-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * clearfix
+ */
+%clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/**
+ * hide-text
+ */
+%hide-text {
+  overflow: hidden;
+  text-indent: 200%;
+  white-space: nowrap;
+}
+
+/**
+ * visually-hidden
+ */
+%visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/**
+ * vertical-align
+ */
+%vertical-align {
+  @include transform(translateY(-50%));
+  position: relative;
+  top: 50%;
+}
+
+/**
+ * inline-block
+ */
+%inline-block {
+  display: inline-block;
+}

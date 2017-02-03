@@ -1,0 +1,27 @@
+$module: form-control-date;
+
+// date control
+.#{$module} {
+  background: $white;
+  padding: 0 10px;
+  position: relative;
+
+  &__label {
+    display: block;
+    font-size: em(16);
+    font-weight: bold;
+    line-height: 2em;
+  }
+
+  &__dd {
+    width: 33px;
+  }
+
+  &__mm {
+    width: 38px;
+  }
+
+  &__yyyy {
+    width: 56px;
+  }
+}

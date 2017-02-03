@@ -1,0 +1,74 @@
+// FONTS
+
+// New Transport Light to Arial
+$NTA-Light: "Arial",
+  Arial,
+  sans-serif !default;
+$NTA-Light-Tabular: "Arial",
+  Arial,
+  sans-serif !default;
+$Helvetica-Regular: "Arial",
+  sans-serif !default;
+
+// Font reset for print
+$Print-reset: sans-serif !default;
+
+// Fontface
+@font-face {
+  font-family: "Arial"!important;
+}
+
+// Overrides
+* {
+  font-family: $NTA-Light !important;
+}
+
+// apply border-box to everything a part from images
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  box-sizing: content-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.column-one-third {
+  min-height: 1px;
+}
+
+// FUNCTIONS
+
+// image-url function
+$image-url-path: '/';
+
+@function image-url($url)
+{
+    @return url('#{$image-url-path}#{$url}');
+}
+
+// file-url function
+$file-url-path: '/';
+
+@function file-url($url)
+{
+    @return url('#{$file-url-path}#{$url}');
+}
+
+
+// public-url function
+$public-url-path: '/';
+
+@function public-url($url)
+{
+    @return url('#{$public-url-path}#{$url}');
+}

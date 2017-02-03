@@ -1,0 +1,11 @@
+.sass-cache
+.jekyll-metadata
+.git
+_site
+node_modules
+libs
+public
+images
+css
+aws.json
+*.tar

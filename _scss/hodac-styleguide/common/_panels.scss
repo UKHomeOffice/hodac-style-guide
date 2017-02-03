@@ -1,0 +1,36 @@
+.text {
+
+  &:first-child {
+    margin-top: 30px;
+  }
+
+  .panel {
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+
+    &.panel-border-narrow {
+      border-left-width: 5px;
+    }
+
+    &.panel-border-wide {
+      border-left-width: 10px;
+    }
+  }
+
+}
+
+// overrides to the existing class
+.panel {
+  background-color: $white;
+  border-style: solid;
+  border-width: 1px;
+  margin-bottom: 1rem;
+
+
+  &--grey {
+    background-color: $grey-3;
+    border-color: $grey-2;
+  }
+
+}

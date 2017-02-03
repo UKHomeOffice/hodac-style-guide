@@ -1,0 +1,40 @@
+$module: report;
+
+.#{$module} {
+
+  h1 {
+    @include core-24;
+
+    color: rgb(73, 143, 226);
+    margin-top: .625em;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    color: $color_gravel_approx;
+    margin-bottom: 5px;
+  }
+
+  dl {
+    clear: both;
+    color: rgb(74,74,74);
+    margin-bottom: 2rem;
+
+    dt {
+      display: inline;
+      font-weight: normal;
+
+      &:after {
+        content: ":";
+      }
+    }
+    dd {
+      display: inline;
+    }
+    dd::after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+}

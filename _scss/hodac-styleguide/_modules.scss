@@ -1,0 +1,22 @@
+// configs
+@import "_variables.scss";
+@import "_base-64-images.scss";
+@import "_trumps.allignments.scss";
+@import "_trumps.spacing.scss";
+
+// styles for stleguide
+@import "_example.scss";
+
+//placeholders
+@import "_placeholders.scss";
+
+// mixins
+@import "_mixins.scss";
+
+// elements
+@import "common/_main.scss";
+@import "form/_main.scss";
+@import "data/_main.scss";
+
+// building-blocks
+@import "building-blocks/_main.scss";

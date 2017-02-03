@@ -1,0 +1,136 @@
+.tabs {
+    list-style: none;
+    margin-bottom: 1.05263em; // 20px
+    // Tab list
+    [role="tablist"] {
+        border-top: 1px solid $grey-2;
+        margin: 0;
+        @include media(tablet) {
+            border-top: 0 none;
+        }
+        li {
+            border-bottom: 1px solid $grey-2;
+            margin: 0;
+            @include core-16;
+            @include media(tablet) {
+                border-bottom: 0 none;
+                float: left;
+                margin: 0 0 -1px;
+                padding: 0;
+            }
+            a {
+                background-color: $white;
+                display: block;
+                padding: em(9);
+                text-decoration: none;
+                @include media(tablet) {
+                    //background-color: $grey-3;
+                    border: 0 none;
+                    float: left;
+                    margin: em(5) em(5) em(5) 0;
+                    padding: em(9) em(19);
+                    text-align: center;
+                }
+                &:focus {
+                    outline: 3px;
+                }
+            }
+            // Active tab
+            [aria-selected="true"] {
+                background-color: $white;
+                color: $text-colour;
+                cursor: default;
+                text-decoration: none;
+                @include media(tablet) {
+                    border: 1px solid $grey-2;
+                    border-bottom: 1px solid transparent;
+                    margin-bottom: 0;
+                    margin-top: 0;
+                    padding: em(13) em(18) em(14);
+                }
+            }
+        }
+    }
+    // Tab content
+    &-content {
+        clear: both;
+        [role="tabpanel"] {
+            @include media(tablet) {
+                border-top: 1px solid $grey-2;
+            }
+            &[aria-hidden="true"] {
+                display: none;
+            }
+        }
+    }
+    // Tab panel inner
+    &-panel-inner {
+        padding: 3rem;
+        &:focus {
+            border: 0;
+            outline: 0;
+        }
+    }
+    &-panel-inner-border {
+        border-bottom: 1px solid $grey-2;
+        border-left: 1px solid $grey-2;
+        border-right: 1px solid $grey-2;
+    }
+}
+
+
+.tabs--overflow-theme.tabs {
+
+    .tabs-list {
+      a {
+          color: $text-colour;
+          background-color: $grey-3;
+          border: 0;
+          font-size: 24px;
+          line-height: 1.25;
+          text-align: left;
+          // width: 350px;
+
+          &:focus,
+          &:hover {
+            text-decoration: underline;
+          }
+      }
+    }
+
+    li {
+        border-bottom: 0;
+
+
+        [aria-selected="true"] {
+            background-color: $white;
+            color: $text-colour;
+            cursor: default;
+            text-decoration: none;
+
+            @include media(tablet) {
+                border: 1px solid $grey-2;
+                border-bottom: 1px solid transparent;
+                margin-bottom: 0;
+                margin-top: 0;
+                padding: em(13) em(18) em(14);
+            }
+
+            &:focus,
+            &:hover {
+              text-decoration: none;
+            }
+        }
+    }
+    // Tab content
+    [role="tabpanel"] {
+        @include media(tablet) {
+            border-top: 1px solid $grey-2;
+            margin: 0 -30px;
+            padding: 15px 30px 0;
+        }
+        &[aria-hidden="true"] {
+            display: none;
+        }
+    }
+}

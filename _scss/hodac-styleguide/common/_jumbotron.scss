@@ -1,0 +1,94 @@
+$module: jumbotron;
+
+.#{$module} {
+  background-color: $govuk-blue;
+  color: $white;
+  margin-bottom: em(20);
+  padding: em(38) em(38) em(18) em(38); // Accounts for paragraph and list margin
+
+
+  // Title
+  &-title {
+    font-weight: bolder;
+    line-height: em(32);
+    margin-bottom: em(30, 48);
+
+    @include rem("font-size", 42px);
+  }
+
+  // Steps
+  &-steps {
+    margin-bottom: em(20);
+
+    @include media(desktop) {
+      border-collapse: collapse;
+      display: table;
+      margin-left: em(-10);
+      margin-right: em(-10);
+    }
+
+
+    li {
+      @include box-sizing(border-box);
+      @include media(desktop) {
+        display: table-cell;
+        padding: 0 em(10);
+        width: 10%;
+      }
+    }
+
+
+    span {
+      border-bottom: 3px solid $light-blue;
+      color: $light-blue;
+      display: block;
+      font-weight: bold;
+      padding: 10px 0;
+      vertical-align: middle;
+      width: 100%;
+
+      img {
+        float: right;
+        height: 22px;
+        margin-left: 5px;
+        vertical-align: text-top;
+        width: 22px;
+
+        @include media(desktop) {
+          float: none;
+        }
+      }
+    }
+
+    .#{$module}-complete {
+      color: $white;
+    }
+  }
+
+  &--fullwidth {
+    @extend %overflow-parent;
+  }
+}
+
+
+// Themes
+.#{$module}--white-theme {
+  .#{$module} {
+    background-color: $white;
+    color: $black;
+  }
+}
+
+.#{$module}--narrow-theme {
+  .#{$module} {
+    &-title {
+      margin: 0;
+
+      @include rem("font-size", 46px);
+    }
+  }
+
+  .lede {
+    font-size: em(19);
+  }
+}

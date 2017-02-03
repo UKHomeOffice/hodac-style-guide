@@ -1,0 +1,20 @@
+%data-button {
+  border: 1px solid $button-border;
+  color: #ffffff;
+  display: inline-block;
+  line-height: 2.6rem;
+  text-align: center;
+  width: 6rem;
+}
+
+.red {
+  background-color: $negative;
+
+  @extend %data-button;
+}
+
+.green {
+  background-color: $positive;
+
+  @extend %data-button;
+}

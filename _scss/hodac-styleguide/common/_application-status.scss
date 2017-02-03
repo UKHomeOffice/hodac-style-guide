@@ -1,0 +1,16 @@
+$module: application-status;
+
+.#{$module} {
+  border: 4px solid $purple;
+  padding: em(20);
+
+  &__intro {
+    font-size: em(16);
+    margin-bottom: 5px;
+  }
+
+  &__heading {
+    font-size: em(24);
+    font-weight: 600;
+  }
+}

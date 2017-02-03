@@ -1,0 +1,5 @@
+$module: phase-banner;
+
+.#{$module} {
+  @extend %site-width-container;
+}

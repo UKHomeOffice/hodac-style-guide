@@ -1,0 +1,33 @@
+$module: indicators;
+
+.#{$module} {
+
+  li {
+    border: 1px solid $color_alto_approx;
+    color: $govuk-blue;
+    display: block;
+    margin-bottom: 4px;
+    overflow: hidden;
+    padding: 10px;
+    padding-right: 4rem;
+    position: relative;
+
+    span {
+      background-color: $color_star_dust_approx;
+      color: $white;
+      display: block;
+      height: 100%;
+      padding: 10px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 0;
+      width: 4rem;
+    }
+  }
+
+  &__hint {
+    height: 50px;
+    padding: 10px;
+  }
+}

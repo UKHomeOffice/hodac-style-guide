@@ -1,0 +1,22 @@
+$path : '/images/';
+@import "compass";
+
+//######## HODAC styles overrides
+
+@import "hodac-styleguide/_overrides.scss";
+
+//######## GOV styles
+
+// GOV.UK elements
+@import 'govuk-elements';
+
+// GOV.UK template
+@import 'govuk-template';
+
+@media print {
+  @import 'govuk-template-print';
+}
+
+//######## HODAC styles
+
+@import "hodac-styleguide/_modules.scss";

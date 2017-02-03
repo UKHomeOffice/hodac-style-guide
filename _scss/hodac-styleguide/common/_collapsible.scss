@@ -1,0 +1,100 @@
+$module: collapsible;
+
+.#{$module} {
+  margin-top: 5rem;
+
+  .#{$module}-controls {
+    li {
+      padding: 0 5px;
+    }
+  }
+
+  .#{$module}-item {
+    &:last-child {
+      border-bottom: 1px solid rgb(90, 100, 100);
+    }
+
+    &:focus {
+      outline: 3px solid $yellow;
+    }
+
+    .#{$module}-heading {
+      border-top: 1px solid rgb(90, 100, 100);
+      cursor: pointer;
+      padding-bottom: 3rem;
+      padding-top: 2rem;
+      position: relative;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: normal;
+        margin: 0;
+      }
+
+      &:after {
+        color: rgb(132,132,132);
+        content: "+";
+        font-size: 80px;
+        line-height: 42px;
+        line-height: 30px;
+        position: absolute;
+        right: 0;
+        top: 2rem;
+      }
+    }
+
+    .#{$module}-content {
+      display: none;
+      padding: 1rem 1rem 4rem;
+    }
+
+    &.open {
+      .#{$module}-heading {
+        border-bottom: 4px solid $govuk-blue;
+
+        &:after {
+          content: "\2013";
+          line-height: 30px;
+        }
+      }
+
+      .#{$module}-content {
+        display: block;
+      }
+    }
+  }
+}
+
+
+// themes
+
+// narrow
+.#{$module}--narrow-theme.#{$module} {
+
+    .#{$module}-item {
+
+      .#{$module}-heading {
+        color: $light-blue;
+        padding: 20px 5px;
+        border-bottom: 0;
+
+        &:after {
+          font-size: em(34);
+          line-height: em(24);
+          right: 10px;
+          top: 13px;
+        }
+        &:hover {
+          background-color: $grey-4;
+        }
+
+        .heading-medium {
+          font-weight: bold;
+        }
+      }
+    }
+}

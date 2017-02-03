@@ -1,0 +1,13 @@
+table caption {
+  border-top: 4px solid #005ea5;
+  font-size: 16px;
+  line-height: 2;
+  padding-top: 5px;
+  text-align: left;
+}
+
+table.table--noborders {
+  td {
+    border: 0;
+  }
+}

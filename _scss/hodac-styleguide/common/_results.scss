@@ -1,0 +1,64 @@
+.results {
+  // margin-top: 8rem;
+
+  > header {
+    border-bottom: 1px solid $grey-2;
+    margin-bottom: 2rem;
+    position: relative;
+
+    form {
+      position: absolute;
+      top: -2px;
+      right: 0;
+
+      .form-control {
+        width: auto;
+        border-width: 1px;
+        background-color: $grey-4;
+        font-size: 16px;
+        padding: 4px;
+      }
+
+    }
+
+  }
+
+  ol {
+    list-style-type: none;
+  }
+
+  ol li {
+    margin-bottom: 2rem;
+  }
+
+  ol li p {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  ol li article header {
+    a {
+      text-decoration: none;
+    }
+
+    h1 {
+      color: $link-colour;
+      font-size: 22px;
+      margin-bottom: 3px;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: normal;
+      margin: 0;
+      color: $grey-1;
+    }
+  }
+  ol li footer {
+    a {
+      color: $link-colour;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+}

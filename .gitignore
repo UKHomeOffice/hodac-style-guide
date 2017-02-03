@@ -1,0 +1,14 @@
+_site
+.sass-cache
+.jekyll-metadata
+node_modules
+/libs
+/public
+/images
+/css
+aws.json
+*.tar
+VERSION
+
+# Mac files
+.DS_Store

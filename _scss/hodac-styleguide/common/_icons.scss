@@ -1,0 +1,87 @@
+.icon {
+  background-repeat: no-repeat;
+  background-size: 20px 14px;
+  cursor: default;
+  text-align: center;
+  vertical-align: middle;
+
+
+  // Variations
+
+  // example
+  // &-close {
+  //   background-image: url('../images/icons/icon-close.png');
+  //   display: block;
+
+  // 	@include device-pixel-ratio() {
+  // 		background-image: url('../images/icons/icon-close-2x.png');
+  //     background-size: 100%;
+  // 	}
+  // }
+  //
+}
+
+// not included in the toolkit / base 64
+.email-icon {
+  background-image: $image-mail-icon-x2;
+  background-position: 0;
+}
+
+.email-feed {
+  background-image: $image-feed-icon-black;
+  background-position-x: 6px;
+  background-position-y: 9px;
+  background-size: 14px;
+}
+
+.print-icon {
+  background-image: url('/images/icon-print.png');
+  background-position: 0;
+
+  @include device-pixel-ratio() {
+    background-image: url('/images/icon-print-2x.png');
+  }
+
+}
+
+.icon-important {
+  position: absolute;
+  background-image: $image-important-2x;
+  background-size: 100%;
+}
+
+.icon-important-small {
+  position: absolute;
+  left: 5px;
+  background-image: $image-important-2x;
+  background-size: 26px;
+  width: 38px;
+  height: 28px;
+  background-repeat: no-repeat;
+}
+
+.icon-download {
+  background: $image-download no-repeat;
+  float: left;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.icon-download-small {
+  @extend .icon-download;
+  width: 15px;
+  height: 15px;
+}
+
+.icon-download-medium {
+  @extend .icon-download;
+  width: 30px;
+  height: 30px;
+}
+
+.icon-download-large {
+  @extend .icon-download;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 100%;
+}

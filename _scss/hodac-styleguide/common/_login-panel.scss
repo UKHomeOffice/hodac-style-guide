@@ -1,0 +1,61 @@
+$module: login-panel;
+
+// module
+.#{$module} {
+  position: relative;
+
+  &__container {
+    background-color: $govuk-blue;
+    color: $white;
+    margin: 0 auto;
+    min-width: 340px;
+    width: 400px;
+  }
+
+  &__form {
+    input {
+      border: 1px $black solid;
+      line-height: 1.14286;
+
+      padding: 6px;
+
+      @include placeholder {
+        color: $grey-1;
+        font-size: 0.84211em;
+        line-height: 26px;
+      };
+    }
+
+    input[type="password"],
+    input[type="text"] {
+      height: 40px;
+      margin-bottom: 15px;
+      text-indent: 10px;
+      width: 100%;
+    }
+  }
+
+  &__remeber-me {
+    display: block;
+    margin-bottom: 15px;
+
+    @include core-16;
+
+    input[type="checkbox"] {
+      padding: 0;
+    }
+  }
+
+  &__legend {
+    display: block;
+    margin-bottom: 15px;
+
+    @include core-16;
+  }
+
+
+  &--jumbotron {
+    margin: 0;
+    padding: 20px 35px;
+  }
+}

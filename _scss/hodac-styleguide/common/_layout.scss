@@ -1,0 +1,7 @@
+.vertical {
+  @include media(640px) {
+    position: relative;
+    top: -15px;
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,60 @@
+$module: welcome-block;
+
+.#{$module} {
+  background-color: $govuk-blue;
+  color: $white;
+  padding: em(20) 0;
+  margin-bottom: 30px;
+
+  @extend %overflow-parent;
+
+  &__wrapper {
+    @extend %overflow-wrapper;
+
+    a {
+      color: $white;
+    }
+  }
+
+  &--narrow {
+    padding: 0;
+  }
+
+  &--dropdown-controls {
+    vertical-align: top;
+
+    .dropdowns {
+      
+      display: block;
+      padding: 0;
+
+      @include media(tablet) {
+        display: inline-block;
+        padding: 0 5px;
+        width: 32.5%;
+      }
+    }
+
+    strong {
+      margin-right: 70px;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+  }
+
+  .heading-xlarge {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .heading-secondary {
+    color: $white;
+  }
+}
+
+// themes
+
+// cmu
+.#{$module}.#{$module}--cmu {
+
+}

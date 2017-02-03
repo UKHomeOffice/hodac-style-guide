@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+    {% include header.html %}
+    <div id="global-header-bar"></div>
+    <!-- page content -->
+    <div id="page-container">
+        <main id="content" role="main">
+            {{ content }}
+        </main>
+    </div>
+    <!-- page content -->
+    {% include footer.html %}
+</body>
+</html>

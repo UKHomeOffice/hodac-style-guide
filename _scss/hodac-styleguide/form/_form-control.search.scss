@@ -1,0 +1,89 @@
+$module: form-control-search;
+
+// search control
+.#{$module} {
+  display: inline-block;
+  background: $white;
+  position: relative;
+  width: 100%;
+
+  &__label {
+    color: $grey-1;
+    display: block;
+    font-size: em(16);
+    height: 40px;
+    left: 0;
+    line-height: 40px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: 15px;
+    top: 1px;
+    z-index: 1;
+  }
+
+  &__input {
+    background: transparent;
+    border: 1px solid $black;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    height: 26px;
+    margin: 0;
+    min-width: 0;
+    padding: 6px;
+    position: relative;
+    text-transform: none;
+    width: calc(100% - 50px);
+    z-index: 3;
+
+    -webkit-appearance: none;
+    @include core-19;
+
+    &--focus,
+    &:focus {
+      background: $white;
+    }
+
+    @media (max-width: 640px) {
+        @include core-16;
+    }
+    @include device-pixel-ratio() {
+        background-position: 115% 50%;
+        background-size: 52.5px 35px;
+    }
+  }
+
+  &__submit {
+    background: $black $image-search-icon no-repeat 2px 50%;
+    border: 1px solid $black;
+    border-left-color: #222222;
+    border-radius: 0;
+    border-radius: 0;
+    border-width: 0 0 0 1px;
+    color: $white;
+    cursor: pointer;
+    height: 40px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-indent: -5000px;
+    top: 0;
+    width: 40px;
+    z-index: 4;
+
+    &:hover {
+      background-color: #171919;
+    }
+  }
+
+  &.wide {
+    @include media(tablet) {
+      width: calc(100% - 90px) !important;
+    }
+
+    @include media(1020px) {
+      width: calc(100% - 230px) !important;
+    }
+  }
+
+}

@@ -1,0 +1,158 @@
+$module: data-grids;
+
+// vars
+$triangle-width: 18px;
+$triangle-empty: 12px;
+
+
+// grid placeholders
+%score-element {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+
+// module
+.#{$module} {
+  clear: both;
+  overflow-x: auto;
+
+  &__score-column {
+    &--purple {
+      color: $white;
+      background-color: $color_electric_violet_approx;
+
+      @extend %score-element;
+    }
+
+    &--green {
+      color: $white;
+      background-color: $color_lima_approx;
+
+      @extend %score-element;
+    }
+
+    &--orange {
+      color: $white;
+      background-color: $color_sea_buckthorn_approx;
+
+      @extend %score-element;
+    }
+  }
+
+  &__row {
+    &:hover {
+      background-color: $grey-3;
+    }
+
+    &--expanded {
+      background-color: $color_link_water_approx;
+    }
+  }
+
+  &__sub-row {
+    background-color: $color_link_water_approx;
+
+    &:hover {
+      background-color: $grey-3;
+    }
+
+    &--opened {
+      display: block;
+    }
+
+    &--closed {
+      display: none;// this should be the default state
+    }
+  }
+
+  &__sortable {
+    color: $govuk-blue;
+    cursor: pointer;
+    position: relative;
+    text-decoration: underline;
+    white-space: nowrap;
+  }
+
+  &--sorting-asc {
+    &:after {
+      content: '▲';
+      margin-left: 0;
+      position: absolute;
+    }
+  }
+
+  &--sorting-desc {
+    &:after {
+      content: '▼';
+      margin-left: 0;
+      position: absolute;
+    }
+  }
+
+  &--opened {
+    cursor: pointer;
+    margin-left: 50%;
+    position: relative;
+    text-align: center;
+
+    &:after {
+      content: "\2013";
+      font-size: em(24);
+      line-height: 30px;
+    }
+  }
+
+  &--closed {
+    cursor: pointer;
+    margin-left: 50%;
+    position: relative;
+    text-align: center;
+
+    &:after {
+      content: "+";
+      font-size: em(24);
+      line-height: 30px;
+    }
+  }
+
+  &--no-border {
+    border-bottom: 1px $white;
+  }
+
+  &--border-top {
+    border-top: $grey-2 1px solid;
+  }
+
+  &--align-center {
+    padding: 0;
+    text-align: center;
+  }
+}
+
+
+// Themes
+.#{$module}--grouped {
+  .#{$module} {
+    &__row {
+      border-left: 1px solid $grey-2;
+      border-right: 1px solid $grey-2;
+    }
+
+    &__grouped-header {
+      background-color: $grey-3;
+      border-top: 1px;
+      border-left: 1px;
+      border-right: 1px;
+      border-bottom: 0;
+      border-color: $grey-2;
+      border-style: solid;
+    }
+
+    &__grouped-inner-header{
+      height: 7rem;
+    }
+  }
+}

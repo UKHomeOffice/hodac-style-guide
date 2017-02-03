@@ -1,0 +1,18 @@
+$module: info-box;
+
+.#{$module} {
+  background-color: $color_midnight_blue_approx;
+  border-top: 1px solid $light-blue;
+  color: $white;
+  padding: em(20) 0;
+
+  @extend %overflow-parent;
+
+  &__wrapper {
+    @extend %overflow-wrapper;
+
+    a {
+      color: $white;
+    }
+  }
+}

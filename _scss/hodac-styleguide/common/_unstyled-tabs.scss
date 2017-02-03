@@ -1,0 +1,44 @@
+$module: unstyled-tabs;
+
+.#{$module} {
+
+  &__nav {
+    li {
+      display: inline-block;
+    }
+  }
+
+  &__nav--ltr {
+    text-align: left;
+  }
+
+  &__nav--rtl {
+    text-align: right;
+  }
+
+  &__list {
+  }
+
+  &__content {
+    [role="tabpanel"][aria-hidden="true"] {
+      display: none;
+    }
+  }
+
+  &__panel {
+  }
+}
+
+// themes
+
+// dropdown tabs
+.dropdowns-tabs--theme {
+  .#{$module} {
+
+    &__nav {
+      li {
+        font-size: em(14);
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+dl.chart {
+  margin-bottom: 2rem;
+  position: relative;
+  width: 100%;
+  max-width: 22rem;
+
+  dt {
+    display: none;
+  }
+
+  dd {
+    display: block;
+    font-size: 88px;
+    font-weight: bold;
+    line-height: .9;
+    padding: 10px 0 0;
+
+    &.positive:before {
+      background-color: $color_christi_approx;
+      top: 0;
+    }
+
+    &.positive:after {
+      content: "Compliant";
+    }
+
+    &.negative:before {
+      background-color: $color_plum_approx;
+      bottom: 0;
+    }
+
+    &.negative:after {
+      content: "Non-compliant";
+    }
+
+    &.negative:after,
+    &.positive:after {
+      color: rgb(73,73,73);
+      display: block;
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+//percentages
+@for $i from 1 through 100 {
+  .percentage-#{$i}:before {
+    $value: ($i * 1%);
+
+    content: "";
+    display: block;
+    height: $value;
+    position: absolute;
+    right: 0;
+    width: 7rem;
+
+    @include media(tablet) {
+      width: 3rem;
+    }
+
+    @include media(desktop) {
+      width: 7rem;
+    }
+  }
+}
+
+.positive {
+  color: $color_christi_approx;
+}
+
+.negative {
+  color: $color_plum_approx;
+}
+
+dl.chart.vertical dt {
+  font-weight: bold;
+}

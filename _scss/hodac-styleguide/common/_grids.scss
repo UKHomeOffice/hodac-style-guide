@@ -1,0 +1,38 @@
+// grids class extension
+$module: grid-row;
+
+.pull-right {
+  float: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+// module
+.#{$module} {
+  .column-one-fifth {
+    @include grid-column( 1/5 );
+  }
+  .column-four-fifths {
+    @include grid-column( 4/5 );
+  }
+
+}
+
+.grid--nopadding {
+  .#{$module} {
+    margin: 0;
+
+    .column-one-half,
+    .column-one-quarter,
+    .column-one-third,
+    .column-one-whole,
+    .column-three-quarters,
+    .column-two-thirds,
+    .column-one-fifth,
+    .column-four-fifths {
+      padding: 0;
+    }
+  }
+}

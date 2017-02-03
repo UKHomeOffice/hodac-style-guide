@@ -1,0 +1,16 @@
+$department-logo-image: '/images/ho_crest_invert_27px_x2.png';
+
+#global-header {
+
+  #logo {
+    background: url($department-logo-image) no-repeat;
+    background-size: 17px 31px;
+    height: 31px;
+    padding-left: 21px;
+
+    img {
+      height: 31px;
+      width: 17px;
+    }
+  }
+}

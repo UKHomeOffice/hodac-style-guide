@@ -1,0 +1,21 @@
+$module: metadata;
+
+// module
+.#{$module} {
+  margin-bottom: 1.25em;
+  margin-top: 2.1em;
+  text-align: right;
+
+  &__links {
+    .print-link {
+      width: 100%;
+      text-align: right;
+    }
+  }
+
+  &__text {
+    @include core-16;
+    color: $grey-1;
+    padding: em(10) 0;
+  }
+}

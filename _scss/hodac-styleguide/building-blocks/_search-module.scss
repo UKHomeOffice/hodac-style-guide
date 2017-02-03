@@ -1,0 +1,152 @@
+$module: search-module;
+
+.#{$module} {
+  position: relative;
+
+  &__bottom {
+    margin-top: -55px;
+  }
+
+  &__bottom-content {
+    background-color: $govuk-blue;
+    display: table;
+
+    @include media(tablet) {
+        background-color: transparent;
+        display: block;
+    }
+  }
+
+  &__bottom-content-left {
+    display: table-footer-group;
+  }
+
+  &__bottom-content-right {
+    display: table-header-group;
+  }
+
+  &__bottom-content-left,
+  &__bottom-content-right {
+    & > div {
+      margin: 0 10px;
+
+      @include media(tablet) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__top {
+    background-color: $govuk-blue;
+    padding-bottom: 15px;
+
+    @extend %overflow-parent;
+  }
+
+  &__wrapper {
+    @extend %overflow-wrapper;
+  }
+
+  &__content {
+    padding: 2em 0;
+
+    &--narrow {
+      padding: 10px 0;
+    }
+  }
+
+  &__form {
+    padding-top: 15px;
+
+    @include core-16;
+
+    fieldset {
+      label {
+        color: $grey-1;
+        display: inline-block;
+        height: 40px;
+        position: relative;
+        text-indent: 0;
+      }
+
+      .form-group {
+        margin: 0;
+      }
+    }
+  }
+
+  &__form-controls {
+    margin-bottom: 10px;
+    margin-top: -30px;
+
+    & >div {
+      vertical-align: top;
+      width: 100%;
+      margin-right: 10px;
+
+       &:last-child {
+         margin-right: 0;
+       }
+    }
+    .dropdowns {
+      float: none;
+      padding: 0;
+
+      @include media(tablet) {
+        float: left;
+        padding: 0 5px;
+        width: 165px;
+      }
+
+      @include media(1020px) {
+        width: 225px;
+      }
+    }
+
+    .form-control-search {
+
+      @include media(tablet) {
+        width: calc(100% - 370px);
+      }
+
+      @include media(1020px) {
+        width: calc(100% - 490px);
+      }
+
+      &__option-group {
+        color: #fff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        label {
+          display: block;
+          margin-top: 5px;
+          @include media(640px) {
+            display: inline-block;
+            margin-right: 25px;
+          }
+        }
+
+      }
+
+    }
+
+    form {
+
+      a, a:link, a:visited {
+        color: #fff;
+        font-size: 16px;
+      }
+
+    }
+
+  }
+
+  //modifiers
+  &--anchor-left {
+    @include media(tablet) {
+      bottom: 0;
+      position: absolute;
+    }
+  }
+}

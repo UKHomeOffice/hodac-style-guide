@@ -1,0 +1,14 @@
+$module: associated-cases;
+
+.#{$module} {
+  &__table {
+    border-bottom: 1px solid $grey-1;
+    border-top: 1px solid $grey-1;
+
+    td {
+      @include core-19;
+      color: $govuk-blue;
+      padding: 25px;
+    }
+  }
+}

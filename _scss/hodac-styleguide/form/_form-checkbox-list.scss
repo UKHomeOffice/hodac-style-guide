@@ -1,0 +1,30 @@
+$module: form-checkbox-list;
+
+// checkbox list
+.#{$module} {
+  background: $white;
+  position: relative;
+
+  &__label {
+    font-size: 14px;
+    padding: 9px 0 5px 30px;
+    width: 90%;
+  }
+
+  &__input {
+    margin-left: -23px;
+    vertical-align: top;
+  }
+
+  &--stack {
+    .#{$module}__label {
+      display: block;
+    }
+  }
+
+  &--inline {
+    .#{$module}__label {
+      display: inline-block;
+    }
+  }
+}

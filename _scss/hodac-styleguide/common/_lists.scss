@@ -1,0 +1,20 @@
+// list modifiers
+.list--left-inline {
+  text-align: left;
+
+  @extend %unstyle-list;
+
+  li {
+    @extend %inline-block;
+  }
+}
+
+.list--right-inline {
+  text-align: right;
+
+  @extend %unstyle-list;
+
+  li {
+    @extend %inline-block;
+  }
+}

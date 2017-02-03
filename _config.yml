@@ -1,0 +1,22 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Atomic templates GOV.UK
+email: daniele@xibitdigital.com
+description: > # this means to ignore newlines until "baseurl:"
+  static site for atomic design for govuk prototypes
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+email: daniele@xibitdigital.com
+github_username:  daniel78uk
+
+markdown: kramdown
+kramdown:
+  input: GFM
+exclude: ["node_modules", "gulpfile.js", "package.json", "aws.json", "Makefile", "Dockerfile.dist", "Dockerfile.dev", ".dockerignore", "start-dev.sh", "README.md", "aws-sample.json"]
+include: ['_common', '_project-hrc', '_project-pls', '_project', '_js']

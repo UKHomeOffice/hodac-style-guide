@@ -1,0 +1,12 @@
+.alert {
+  display: block;
+  border-left: 10px solid $govuk-blue;
+  background-color: $light-blue-25;
+  padding: 5px;
+  margin-bottom: 30px;
+
+  p {
+    margin: 0;
+  }
+
+}

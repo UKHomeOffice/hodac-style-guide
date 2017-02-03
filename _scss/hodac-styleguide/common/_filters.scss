@@ -1,0 +1,294 @@
+%box-sizing {
+  box-sizing: border-box;
+  height: 40px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+%filter-container {
+
+  padding: 0;
+
+  &:after {
+    @extend %clearfix;
+  }
+}
+
+// Helpers
+.container--overlow {
+  overflow-y: overlay;
+}
+
+// Filter
+.form-group {
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form-hint {
+  color: $black;
+  font-weight: normal;
+  margin-top: 5px;
+  @include core-14;
+}
+
+.container > .form-hint {
+  padding-left: 10px;
+}
+
+.filter-open-all,
+.filter-close-all {
+  color: $govuk-blue;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.text-filter {
+  padding: 0 10px;
+}
+
+
+.dates {
+  display: block;
+
+  &.hidden {
+    display: none;
+  }
+
+  .date-group {
+    display: inline-block;
+    float: left;
+    margin-bottom: 5px;
+    padding: 0;
+    width: 49%;
+
+    &:first-child {
+      margin-right: 2%;
+    }
+  }
+
+  input {
+    border: 1px solid $grey-2;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    font-size: 16px;
+    height: 40px;
+    padding: 5px 10px;
+    width: 100%;
+  }
+}
+
+.sort-filter {
+  display: block;
+  text-align: right !important;
+  width: 100%;
+}
+
+.sort-filter-select {
+  background-color: $white;
+  border: 1px solid $grey-2;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 0;
+  font-size: 19px;
+  font-weight: 400;
+  height: 35px;
+  line-height: 1.31579;
+  padding: 4px;
+  text-transform: none;
+}
+
+@media(max-width: 640px) {
+  .sort-filter-select {
+    font-size: 16px;
+    height: 30px;
+    line-height: 1.25;
+  }
+}
+
+.checkbox-filter .checkbox-container {
+  background-color: $white;
+  height: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+
+  label {
+    display: inline-block;
+    font-size: 16px;
+    padding: 9px 0 5px 30px;
+    width: 90%;
+  }
+
+  input {
+    margin-left: -23px;
+    vertical-align: top;
+  }
+}
+
+// Keywords filter
+.keyword-filter {
+
+  &__container {
+    @extend %filter-container;
+
+    .form-group {
+      margin: 0;
+    }
+  }
+
+  &__controls {
+    color: white;
+    float: left;
+    font-size: 36px;
+    height: 50px;
+    margin-right: 10px;
+    text-align: center;
+    vertical-align: middle;
+    width: 50px;
+
+    &--green {
+      background-color: $color_la_palma_approx;
+    }
+  }
+
+  &__controls-legend {
+    @include core-19;
+  }
+
+  &__header {
+    cursor: pointer;
+    height: 50px;
+    margin: 0;
+
+    @extend %filter-container;
+  }
+
+  &__item {
+    background-color: $white;
+    margin-bottom: 5px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    &--closed {
+      .keyword-filter__controls:after {
+        content: '+';
+      }
+      .keyword-filter__selections {
+        display: none;
+      }
+    }
+
+    &--open {
+      .keyword-filter__controls:after {
+        content: '-';
+      }
+
+      .keyword-filter__selections {
+        display: block;
+      }
+    }
+  }
+
+  &__tag-list {
+    background-color: $white;
+    // todo
+  }
+
+  &__viewport {
+    height: 360px;
+  }
+
+  &__widget-controls {
+    text-align: right;
+
+    @include core-14;
+    a {
+      margin-left: 5px;
+    }
+  }
+}
+
+
+// Date filter
+.date-filter {
+
+  &__container {
+    @extend %filter-container;
+
+    &--three-columns {
+      label {
+        white-space: nowrap;
+
+        width: 40% !important;
+
+        @include media(desktop) {
+          width: 25% !important;
+        }
+      }
+    }
+  }
+
+  &__custom {
+    margin-left: -30px;
+
+    input,
+    p {
+      margin-left: 30px !important;
+    }
+
+    p {
+      margin-top: 10px;
+      padding-right: 30px;
+    }
+  }
+}
+
+// Nationality filter
+.nationality-filter {
+
+  &__container {
+    @extend %filter-container;
+
+    position: relative;
+
+    input {
+      @extend %box-sizing;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .suggest {
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    overflow-y: scroll;
+    border-left: 1px solid #666;
+    border-bottom: 1px solid #666;
+    border-right: 1px solid #666;
+  }
+
+  .suggest li {
+    cursor: pointer;
+    padding: 3px 5px;
+  }
+
+  .suggest li:hover {
+    background-color: #eee;
+  }
+
+}

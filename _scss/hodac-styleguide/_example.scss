@@ -1,0 +1,64 @@
+.example {
+  border: 1px solid #bfc1c3;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  overflow: hidden;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 30px;
+  position: relative;
+}
+
+@media (min-width: 641px) {
+  .example {
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 45px;
+  }
+}
+
+.example:before {
+  background: #bfc1c3;
+  color: white;
+  content: "EXAMPLE";
+  font-family: "nta", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  left: 0;
+  line-height: 1.25;
+  padding: .2105263158em .7894736842em .2105263158em .7894736842em;
+  position: absolute;
+  text-transform: none;
+  top: 0;
+}
+
+@media (min-width: 641px) {
+  .example:before {
+    font-size: 14px;
+    line-height: 1.4285714286;
+  }
+}
+
+.example .highlight {
+  color: #0076c0;
+  font-style: normal;
+}
+
+.example .list-bullet {
+  margin-bottom: 20px;
+}
+
+.example-grid p {
+  background: url("/images/examples/grid.png") 0 0 repeat;
+  height: 30px;
+  margin-bottom: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 100%;
+}
+
+.example--overflow {
+  @extend %overflow-parent;
+}

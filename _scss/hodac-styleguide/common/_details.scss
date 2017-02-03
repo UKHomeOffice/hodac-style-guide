@@ -1,0 +1,15 @@
+$module: details;
+
+.#{$module} {
+
+  &__summary {
+
+  }
+
+  &__item-description {
+    @include core-16;
+
+    color: $grey-1;
+    margin-left: 20px;
+  }
+}

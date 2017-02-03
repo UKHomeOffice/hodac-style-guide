@@ -1,0 +1,7 @@
+$module: hint-text;
+
+.#{$module} {
+  @include core-16;
+  color: $grey-1;
+  padding: em(10) 0;
+}

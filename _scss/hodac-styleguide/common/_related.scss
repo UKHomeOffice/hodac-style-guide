@@ -1,0 +1,180 @@
+.related-container {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 40px;
+  padding: 0 15px;
+}
+
+@media (min-width: 769px) {
+  .related-container {
+    float: left;
+    width: 33.33333%;
+  }
+}
+
+.related {
+  border-top: 10px solid #005ea5;
+  padding-top: 5px;
+
+  nav {
+    margin-bottom: 1.25em;
+  }
+
+  h2 {
+    color: #0b0c0c;
+    font-size: 18px;
+    font-weight: 400;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: .5em;
+    margin-top: .3em;
+    position: relative;
+    text-transform: none;
+  }
+
+  ul {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.14286;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-transform: none;
+  }
+
+  li {
+    margin-bottom: .75em;
+    padding-left: 0;
+
+    &.related-topic {
+      list-style: none outside none;
+
+      a {
+        display: inline;
+        font-weight: bold;
+      }
+    }
+
+    a {
+      background-position: 0 -287px;
+      background-repeat: no-repeat;
+      display: block;
+      line-height: 1.25em;
+
+      orphans: 2;
+
+      &:hover {
+        background-position: 0 10px;
+      }
+
+      &[href*="#"] {
+        background: none;
+        color: #888888;
+        cursor: default;
+        text-decoration: none;
+      }
+
+      &.view-all {
+        margin: 10px 0 10px;
+      }
+
+      &[rel="external"] {
+        &:after {
+          background-position: 5px 0;
+          content: "\A0\A0\A0\A0\A0\A0";
+        }
+
+        &:hover:after {
+          background-position: 5px -388px;
+        }
+      }
+    }
+  }
+
+  .return-to-top {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.14286;
+    margin: .25em 0 0;
+    padding: .75em 0;
+    text-transform: none;
+  }
+}
+
+@media (min-width: 641px) {
+  .related h2 {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+
+@media (max-width: 640px) {
+  .related h2 {
+    font-size: 17px;
+    margin-bottom: .625em;
+  }
+}
+
+@media (min-width: 641px) {
+  .related ul {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 641px) {
+  .related .return-to-top {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 769px) {
+  .related .return-to-top {
+    left: -9999em;
+    position: absolute;
+  }
+}
+
+.govuk-related-items {
+  border-top: 10px solid #005ea5;
+  padding-top: 5px;
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: .5em;
+    margin-top: .3em;
+    text-transform: none;
+  }
+  ul {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.14286;
+    list-style: none;
+    margin-bottom: 1.25em;
+    text-transform: none;
+    li {
+      margin-bottom: .75em;
+      &.related-items-more {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media (min-width: 641px) {
+  .govuk-related-items h2 {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 641px) {
+  .govuk-related-items ul {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}

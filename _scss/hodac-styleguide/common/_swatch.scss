@@ -1,0 +1,58 @@
+// module name
+$module: swatch;
+
+// vars
+$swatch-radius: 40px;
+
+// module definition
+.#{$module} {
+  border-radius: 100%;
+  color: $white;
+  display: inline-block;
+  height: $swatch-radius;
+  text-align: center;
+  width: $swatch-radius;
+  @include bold-24;
+
+  // modifiers
+  &--green {
+    background-color: $color_christi_approx;
+
+    &:after {
+      content: "G";
+      font-weight: bold;
+      line-height: $swatch-radius;
+    }
+  }
+
+  &--super-green {
+    background-color: $color_fun_green_approx;
+
+    &:after {
+      content: "SG";
+      font-weight: bold;
+      line-height: $swatch-radius;
+    }
+  }
+
+  &--amber,
+  &--orange {
+    background-color: $color_orange_approx;
+
+    &:after {
+      content: "A";
+      font-weight: bold;
+      line-height: $swatch-radius;
+    }
+  }
+
+  &--purple {
+    background-color: $color_plum_approx;
+
+    &:after {
+      content: "P";
+      font-weight: bold;
+      line-height: $swatch-radius;
+    }
+  }
+}
