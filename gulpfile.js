@@ -9,7 +9,8 @@ var s3             = require('gulp-s3');
 var gzip           = require('gulp-gzip');
 var cssmin         = require('gulp-cssmin');
 var rename         = require('gulp-rename');
-var awsCredentials = JSON.parse(existsSync('./aws.json') ? fs.readFileSync('./aws.json') : fs.readFileSync('./aws-sample.json'));
+var path           = require('path');
+var awsCredentials = existsSync('./aws.json') ? require('./aws.json') : require('./aws-sample.json');
 
 /**
  * existsSync
@@ -35,7 +36,8 @@ var messages = {
  */
 gulp.task('jekyll-build', ['minify-css', 'build:images'], function (done) {
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn(jekyll, ['build'], {
+    var configPath = path.resolve(__dirname, '_config.yml');
+    return cp.spawn(jekyll, ['build', '--config', configPath], {
         stdio: 'inherit',
     })
     .on('close', done);
