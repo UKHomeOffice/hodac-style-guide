@@ -7,7 +7,6 @@
 
 # Site settings
 title: Atomic templates GOV.UK
-email: daniele@xibitdigital.com
 description: > # this means to ignore newlines until "baseurl:"
   static site for atomic design for govuk prototypes
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -20,3 +19,6 @@ kramdown:
   input: GFM
 exclude: ["node_modules", "gulpfile.js", "package.json", "aws.json", "Makefile", "Dockerfile.dist", "Dockerfile.dev", ".dockerignore", "start-dev.sh", "README.md", "aws-sample.json"]
 include: ['_common', '_project-hrc', '_project-pls', '_project', '_js']
+
+source: /app
+destination: /app/_site
