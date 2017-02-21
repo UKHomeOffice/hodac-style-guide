@@ -36,9 +36,8 @@ var messages = {
  */
 gulp.task('jekyll-build', ['minify-css', 'build:images'], function (done) {
     browserSync.notify(messages.jekyllBuild);
-    var config = path.resolve(__dirname, '_config.yml');
-    console.log(config)
-    return cp.spawn(jekyll, ['build', '--config', config], {
+    var configPath = path.resolve(__dirname, '_config.yml');
+    return cp.spawn(jekyll, ['build', '--config', configPath], {
         stdio: 'inherit',
     })
     .on('close', done);
