@@ -17,8 +17,8 @@ github_username:  daniel78uk
 markdown: kramdown
 kramdown:
   input: GFM
-exclude: ["node_modules", "gulpfile.js", "package.json", "aws.json", "Makefile", "Dockerfile.dist", "Dockerfile.dev", ".dockerignore", "start-dev.sh", "README.md", "aws-sample.json"]
-include: ['_common', '_project-hrc', '_project-pls', '_project', '_js']
+exclude: ["node_modules", "gulpfile.js", "package.json", "aws.json", "Makefile", ".dockerignore", "README.md", "aws-sample.json"]
+include: ['_common', '_project', '_js']
 
 source: /app
 destination: /app/_site
