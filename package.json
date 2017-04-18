@@ -26,9 +26,8 @@
   "author": "Daniele Sangalli",
   "dependencies": {
     "compass-mixins": "^0.12.7",
-    "govuk-elements-sass": "^1.1.2",
-    "govuk_frontend_toolkit": "^4.8.1",
-    "govuk_template_mustache": "^0.16.4",
+    "govuk-elements-sass": "3.0.1",
+    "govuk_template_mustache": "0.19.2",
     "napa": "^2.3.0"
   },
   "devDependencies": {
